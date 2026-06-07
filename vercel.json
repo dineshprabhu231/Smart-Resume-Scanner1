@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npx tsc && npx vite build",
+  "buildCommand": "./node_modules/.bin/tsc && ./node_modules/.bin/vite build",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
