@@ -3,6 +3,7 @@ services:
     name: smart-resume-scanner-backend
     env: python
     plan: free
+    pythonVersion: "3.12"
     buildCommand: >
       cd backend &&
       pip install -r requirements.txt &&
