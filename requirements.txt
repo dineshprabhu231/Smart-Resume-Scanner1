@@ -9,7 +9,7 @@ setuptools>=70.0.0
 
 # AI / NLP
 scikit-learn==1.5.1
-spacy==3.8.13
+spacy>=3.8.13
 nltk==3.8.1
 numpy==1.26.4
 
