@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: smart-resume-scanner-backend
+    env: python
+    plan: free
+    buildCommand: >
+      cd backend &&
+      pip install -r requirements.txt &&
+      python -m spacy download en_core_web_sm || true
+    startCommand: cd backend && gunicorn -w 4 -b 0.0.0.0:8000 "app:create_app()"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: JWT_ACCESS_TOKEN_EXPIRES
+        value: "86400"
+
+  - type: web
+    name: smart-resume-scanner-frontend
+    env: node
+    plan: free
+    buildCommand: cd frontend && npm ci
+    startCommand: cd frontend && npm run build && npx vite preview --host 0.0.0.0 --port 3000
+
+databases:
+  - name: smart-resume-db
+    plan: free
