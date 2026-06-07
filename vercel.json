@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm install && npx tsc --skipLibCheck && npx vite build",
+  "buildCommand": "npm install && chmod +x node_modules/.bin/tsc node_modules/.bin/vite && npx vite build",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
@@ -16,3 +16,4 @@
     }
   ]
 }
+
