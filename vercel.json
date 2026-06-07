@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "./node_modules/.bin/tsc && ./node_modules/.bin/vite build",
+  "buildCommand": "npm install && npm run build",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
