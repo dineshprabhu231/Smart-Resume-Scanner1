@@ -24,7 +24,7 @@ def create_app(env: str = None) -> Flask:
     # Initialize extensions
     db.init_app(app)
     jwt.init_app(app)
-    cors.init_app(app, resources={r"/api/*": {"origins": "*"}})
+ cors.init_app(app, resources={r"/api/*": {"origins": ["https://resume-bay-rho.vercel.app", "https://smart-resume-scanner1.vercel.app"]}})
 
     # Register blueprints
     from .routes.auth import auth_bp
